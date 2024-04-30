@@ -1,0 +1,74 @@
+/* 기본 스타일 */
+.productCard {
+  display: flex;
+  flex-direction: column;
+  width: 450px; /* 한 줄에 2개의 카드가 들어갈 수 있도록 너비 조정 */
+  height: 480px; /* 높이를 자동으로 조정하여 비율을 유지 */
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--bs-gray-300);
+  margin: 10px; /* 카드 사이의 여백 조정 */
+  transition: transform 0.3s ease; /* hover 효과를 부드럽게 */
+}
+
+.productCard:hover {
+  transform: scale(1.05); /* 호버 시 카드 확대 */
+}
+
+.AppDark .productCard {
+  border-color: var(--bs-gray-800);
+}
+
+.productCardImgBox {
+  width: 450px;
+  height: 320px; /* 이미지 박스의 높이 고정 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.productCardImg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.productCardInfoBox {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  
+  padding: 20px;
+  background-color: var(--bs-gray-200);
+  color: black;
+}
+
+.AppDark .productCardInfoBox {
+  background-color: var(--bs-gray-700);
+  color: var(--bs-gray-500);
+}
+
+.productCardInfoBox > p {
+  margin: 0;
+  flex-grow: 1;
+}
+
+.productCardInfoBox .cardTitle {
+  font-weight: 600;
+  line-height: 1.2;
+  max-height: 3.6rem;
+  overflow: auto;
+}
+
+.productCardInfoBox .cardCost {
+  margin: 0;
+}
+
+/* 화면 크기에 따른 조정 */
+@media (max-width: 1200px) {
+  .productCard {
+    width: calc(100% - 40px); /* 화면이 1200px 이하일 때 카드 한 개가 전체 너비를 차지하도록 조정 */
+    margin: 20px;
+  }
+}

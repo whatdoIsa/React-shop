@@ -1,0 +1,108 @@
+.productCard {
+  margin-top: 1rem;
+  width: 450px; /* 카드의 가로 너비를 고정 */
+  height: 480px; /* 카드의 높이를 고정 */
+  display: flex;
+  flex-direction: column; /* 내용을 세로로 정렬 */
+}
+
+.productCardImgBox {
+  display: flex;
+  flex-shrink: 0;
+  padding: 1rem;
+  margin: 0;
+  width: 100%; /* 이미지 박스를 카드 너비에 맞춤 */
+  height: 14rem; /* 이미지 박스의 높이를 고정 */
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.productCardImg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: fill;
+}
+
+.productDetail {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 2rem 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1; /* 나머지 공간을 채움 */
+}
+
+.productDetail > h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+.productDetail > p {
+  margin: 0.5rem 0 1rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+}
+
+.productDetail a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.productDetail a:hover{
+  text-decoration: underline;
+  color: inherit;
+}
+
+.counter {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+}
+
+.counter > * {
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.leftbtn, .rightbtn {
+  background-color: #5014B8;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.leftbtn {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.rightbtn {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media (min-width: 1025px) {
+  .productCard {
+    display: flex;
+    flex-direction: row; /* 데스크탑에서는 카드를 가로로 표시 */
+    width: 40rem; /* 데스크탑에서 카드의 너비를 조정 */
+    height: 20rem; /* 데스크탑에서 카드의 높이를 조정 */
+  }
+  .productCardImgBox {
+    width: 14rem; /* 이미지 박스의 너비를 고정 */
+    height: 100%; /* 데스크탑에서 이미지 박스의 높이를 카드 높이에 맞춤 */
+  }
+  .productDetail {
+    padding: 2rem 3rem;
+  }
+}
